@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/profile', 'ProfilesController@store');
+Route::patch('/profile/{profile}', 'ProfilesController@update');
+Route::delete('/profile/{profile}', 'ProfilesController@destroy');
