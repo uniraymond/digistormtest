@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Profile;
+use App\User;
 use Illuminate\Http\Request;
 
 class ProfilesController extends Controller
@@ -25,6 +26,30 @@ class ProfilesController extends Controller
     }
 
     /**
+     * edit a profile
+     *
+     * @param Profile $profile
+     * @return Profile
+     */
+    public function edit($id)
+    {
+        $user = User::find($id);
+        return view('profile.edit', compact('user'));
+    }
+
+    /**
+     * show a profile
+     *
+     * @param Profile $profile
+     * @return Profile
+     */
+    public function show($id)
+    {
+        $user = User::find($id);
+        return view('profile.show', compact('user'));
+    }
+
+    /**
      * update a profile
      *
      * @param Profile $profile
@@ -37,6 +62,24 @@ class ProfilesController extends Controller
         $profile->update($data);
 
         return redirect($profile->path());
+    }
+
+    /**
+     * update a profile
+     *
+     * @param Profile $profile
+     * @return Profile
+     */
+    public function updateUserprofile($id)
+    {
+        $user = User::find($id);
+
+        $data = $this->validateRequest();
+        $data['user_id'] = $id;
+
+        $user->Profile->update($data);
+
+        return redirect($user->Profile->userpath());
     }
 
     /**
@@ -58,8 +101,7 @@ class ProfilesController extends Controller
      */
     protected function validateRequest()
     {
-        return request()->validate([
-            'user_id' => 'required',
+        return \request()->validate([
             'fname' => 'required',
             'lname' => 'required',
             'dob' => 'required',

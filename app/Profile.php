@@ -23,4 +23,14 @@ class Profile extends Model
     {
         return '/profile/' . $this->id;
     }
+
+    /**
+     * load profile path with id
+     *
+     * @return string
+     */
+    public function userpath()
+    {
+        return 'user/' . $this->id . '/info';
+    }
 }

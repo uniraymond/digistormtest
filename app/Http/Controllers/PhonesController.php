@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Phone;
+use App\User;
 use Illuminate\Http\Request;
 
 class PhonesController extends Controller
@@ -12,16 +13,33 @@ class PhonesController extends Controller
     {
         return Phone::all();
     }
+
     /**
      * store a phone
      */
-    public function store()
+    public function create($id)
     {
+        $user = User::find($id);
+        if ($user) {
+            return view('phone.create', compact('user'));
+        } else {
+            return redirect('/user');
+        }
+    }
+
+    /**
+     * store a phone
+     */
+    public function store($id)
+    {
+        $user = User::find($id);
+
         $data = $this->validateRequest();
+        $data['user_id'] = $id;
 
         $phone = Phone::create($data);
 
-        return redirect($phone->path());
+        return redirect($phone->userpath($id));
     }
 
     /**
@@ -44,11 +62,11 @@ class PhonesController extends Controller
      *
      * @param Phone $phone
      */
-    public function destroy(Phone $phone)
+    public function destroy($id, Phone $phone)
     {
         $phone->delete();
 
-        return redirect('/phone');
+        return redirect('/user/' . $id .'/info');
     }
 
     /**
@@ -59,7 +77,6 @@ class PhonesController extends Controller
     protected function validateRequest()
     {
         return request()->validate([
-            'user_id' => 'required',
             'phone_type' => 'required',
             'phone_number' => 'required'
         ]);

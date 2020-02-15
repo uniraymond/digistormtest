@@ -26,4 +26,14 @@ class Address extends Model
     {
         return '/address/' . $this->id;
     }
+
+    /**
+     * load address path with id
+     *
+     * @return string
+     */
+    public function userpath($id)
+    {
+        return 'user/' . $id . '/info';
+    }
 }
