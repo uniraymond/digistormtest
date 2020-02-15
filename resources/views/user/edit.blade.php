@@ -18,80 +18,80 @@
                                 <div class="col-9 mb-2">
                                     <div class="input-group">
                                         <label class="col-4" for="fname">First Name </label>
-                                        <input class="input form-control" name="fname" value="{{ $user->Profile->fname }}" />
+                                        <input class="input form-control" name="fname" value="{{ $user->Profile->fname }}" required />
 
                                     </div>
                                 </div>
                                     <div class=" col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="lname">Last Name </label>
-                                            <input class="input form-control" name="lname" value="{{ $user->Profile->lname }}" />
+                                            <input class="input form-control" name="lname" value="{{ $user->Profile->lname }}" required/>
                                         </div>
                                     </div>
                                     <div class=" col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="dob"> Date of Birth </label>
-                                            <input class="input form-control" name="dob" value="{{ $user->Profile->dob }}" />
+                                            <input class="input form-control" name="dob" value="{{ $user->Profile->dob }}" required/>
                                         </div>
                                     </div>
                                     <div class=" col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="company">Company </label>
-                                                <input class="input form-control" name="company" value="{{ $user->Profile->company }}" />
+                                                <input class="input form-control" name="company" value="{{ $user->Profile->company }}" required />
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="position">Position </label>
-                                                <input class="input form-control" name="position" value="{{ $user->Profile->position }}" />
+                                                <input class="input form-control" name="position" value="{{ $user->Profile->position }}" required/>
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="phone">Phone </label>
-                                                <input class="input form-control" name="phone" value="{{ $user->Profile->phone }}" />
+                                                <input class="input form-control" name="phone" value="{{ $user->Profile->phone }}" required/>
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="address">Address </label>
-                                                <input class="input form-control" name="address" value="{{ $user->Profile->address }}" />
+                                                <input class="input form-control" name="address" value="{{ $user->Profile->address }}" required/>
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="region">Region </label>
-                                                <input class="input form-control" name="region" value="{{ $user->Profile->region }}" />
+                                                <input class="input form-control" name="region" value="{{ $user->Profile->region }}" required/>
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="suburb">Suburb </label>
-                                                <input class="input form-control" name="suburb" value="{{ $user->Profile->suburb }}" />
+                                                <input class="input form-control" name="suburb" value="{{ $user->Profile->suburb }}" required/>
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="state">State </label>
-                                            <input class="input form-control" name="state" value="{{ $user->Profile->state }}" />
+                                            <input class="input form-control" name="state" value="{{ $user->Profile->state }}" required/>
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="postcode">PostCode </label>
-                                            <input class="input form-control" name="postcode" value="{{ $user->Profile->postcode }}" />
+                                            <input class="input form-control" name="postcode" value="{{ $user->Profile->postcode }}" required/>
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="country">Country </label>
-                                            <input class="input form-control" name="country" value="{{ $user->Profile->country }}" />
+                                            <input class="input form-control" name="country" value="{{ $user->Profile->country }}" required/>
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">

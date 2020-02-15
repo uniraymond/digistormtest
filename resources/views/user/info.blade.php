@@ -77,7 +77,7 @@
                             @endif
 
                             <div class="row">
-                                <div class="col-md-4 md-3" >
+                                <div class="col-md- md-3" >
                                     <a href="/user/{{ $user->id }}/edit" class="">Edit Profile</a>
                                 </div>
                                 <div class="col-md-4 md-3" >
@@ -95,80 +95,80 @@
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="fname">First Name </label>
-                                            <input class="input form-control" name="fname" value="" />
+                                            <input required class="input form-control" name="fname" value="" />
 
                                         </div>
                                     </div>
                                     <div class=" col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="lname">Last Name </label>
-                                            <input class="input form-control" name="lname" value="" />
+                                            <input required class="input form-control" name="lname" value="" />
                                         </div>
                                     </div>
                                     <div class=" col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="dob"> Date of Birth </label>
-                                            <input class="input form-control" name="dob" value="" />
+                                            <input required class="input form-control" name="dob" value="" />
                                         </div>
                                     </div>
                                     <div class=" col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="company">Company </label>
-                                            <input class="input form-control" name="company" value="" />
+                                            <input required class="input form-control" name="company" value="" />
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="position">Position </label>
-                                            <input class="input form-control" name="position" value="" />
+                                            <input required class="input form-control" name="position" value="" />
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="phone">Phone </label>
-                                            <input class="input form-control" name="phone" value="" />
+                                            <input required class="input form-control" name="phone" value="" />
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="address">Address </label>
-                                            <input class="input form-control" name="address" value="" />
+                                            <input required class="input form-control" name="address" value="" />
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="region">Region </label>
-                                            <input class="input form-control" name="region" value="" />
+                                            <input required class="input form-control" name="region" value="" />
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="suburb">Suburb </label>
-                                            <input class="input form-control" name="suburb" value="" />
+                                            <input required class="input form-control" name="suburb" value="" />
 
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="state">State </label>
-                                            <input class="input form-control" name="state" value="" />
+                                            <input required class="input form-control" name="state" value="" />
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="postcode">PostCode </label>
-                                            <input class="input form-control" name="postcode" value="" />
+                                            <input required class="input form-control" name="postcode" value="" />
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
                                         <div class="input-group">
                                             <label class="col-4" for="country">Country </label>
-                                            <input class="input form-control" name="country" value="" />
+                                            <input required class="input form-control" name="country" value="" />
                                         </div>
                                     </div>
                                     <div class="col-9 mb-2">
