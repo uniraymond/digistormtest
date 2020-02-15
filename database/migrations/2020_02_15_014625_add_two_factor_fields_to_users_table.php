@@ -13,7 +13,7 @@ class AddTwoFactorFieldsToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('user', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             $table->string('two_factor_code')->nullable();
             $table->dateTime('two_factor_expires_at')->nullable();
         });
@@ -26,7 +26,7 @@ class AddTwoFactorFieldsToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('user', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             $table->drop(['two_factor_code', 'two_factor_expires_at']);
         });
     }

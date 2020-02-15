@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Address;
+use App\User;
 use Illuminate\Http\Request;
 
 class AddressesController extends Controller
@@ -15,13 +16,22 @@ class AddressesController extends Controller
     /**
      * store a address
      */
-    public function store()
+    public function create($id)
+    {
+        $user = User::findOrFail($id);
+
+        return view('address.create', compact('user'));
+    }
+    /**
+     * store a address
+     */
+    public function store($id)
     {
         $data = $this->validateRequest();
-
+        $data['user_id'] = $id;
         $address = Address::create($data);
 
-        return redirect($address->path());
+        return redirect($address->userpath($id));
     }
 
     /**
@@ -30,13 +40,15 @@ class AddressesController extends Controller
      * @param Address $address
      * @return Address
      */
-    public function update(Address $address)
+    public function update($id)
     {
+        $user = User::find($id);
+
         $data = $this->validateRequest();
 
-        $address->update($data);
+        $user->Address->update($data);
 
-        return redirect($address->path());
+        return redirect($user->Address->userpath());
     }
 
     /**
@@ -44,11 +56,11 @@ class AddressesController extends Controller
      *
      * @param Address $address
      */
-    public function destroy(Address $address)
+    public function destroy($id, Address $address)
     {
         $address->delete();
 
-        return redirect('/address');
+        return redirect('/user/' . $id . '/info');
     }
 
     /**
@@ -59,7 +71,6 @@ class AddressesController extends Controller
     protected function validateRequest()
     {
         return request()->validate([
-            'user_id' => 'required',
             'address_type' => 'required',
             'address' => 'required',
             'region' => 'required',

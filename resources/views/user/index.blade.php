@@ -11,7 +11,7 @@
                         <lu>
                             @foreach ($users as $user)
                                 <li>
-                                    {{ $user->Profile->fname }}
+                                    {{ isset($user->Profile->fname) ? $user->Profile->fname : '' }}
                                 </li>
                             @endforeach
                         </lu>

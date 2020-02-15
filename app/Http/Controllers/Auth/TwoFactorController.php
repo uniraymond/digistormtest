@@ -17,7 +17,7 @@ class TwoFactorController extends Controller
     public function index()
     {
 
-        return view('user.index');
+        return view('auth.twoFactor');
     }
 
     public function store(Request $request)
@@ -32,7 +32,7 @@ class TwoFactorController extends Controller
         {
             $user->resetTwoFactorCode();
 
-            return redirect()->route('admin.home');
+            return redirect()->route('user.home');
         }
 
         return redirect()->back()->withErrors(['two_factor_code' => 'The two factor code you have entered does not match']);

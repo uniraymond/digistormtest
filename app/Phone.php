@@ -24,4 +24,14 @@ class Phone extends Model
     {
         return '/phone/' . $this->id;
     }
+
+    /**
+     * load phone path with id
+     *
+     * @return string
+     */
+    public function userpath($id)
+    {
+        return 'user/' . $id . '/info';
+    }
 }
