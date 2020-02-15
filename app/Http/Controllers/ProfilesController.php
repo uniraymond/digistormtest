@@ -9,7 +9,7 @@ class ProfilesController extends Controller
 {
     public function index()
     {
-
+        return Profile::all();
     }
 
     /**
