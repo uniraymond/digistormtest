@@ -13,47 +13,47 @@
                                 <div class="col-9 mb-2">
                                     <div class="input-group">
                                         <label class="col-4" for="address_type">Address Type</label>
-                                        <input class="input form-control" name="address_type" value="" />
+                                        <input required class="input form-control" name="address_type" value="" />
 
                                     </div>
                                 </div>
                                 <div class="col-9 mb-2">
                                     <div class="input-group">
                                         <label class="col-4" for="address">Address </label>
-                                        <input class="input form-control" name="address" value="" />
+                                        <input required class="input form-control" name="address" value="" />
 
                                     </div>
                                 </div>
                                 <div class="col-9 mb-2">
                                     <div class="input-group">
                                         <label class="col-4" for="region">Region </label>
-                                        <input class="input form-control" name="region" value="" />
+                                        <input required class="input form-control" name="region" value="" />
 
                                     </div>
                                 </div>
                                 <div class="col-9 mb-2">
                                     <div class="input-group">
                                         <label class="col-4" for="suburb">Suburb </label>
-                                        <input class="input form-control" name="suburb" value="" />
+                                        <input required class="input form-control" name="suburb" value="" />
 
                                     </div>
                                 </div>
                                 <div class="col-9 mb-2">
                                     <div class="input-group">
                                         <label class="col-4" for="state">State </label>
-                                        <input class="input form-control" name="state" value="" />
+                                        <input required class="input form-control" name="state" value="" />
                                     </div>
                                 </div>
                                 <div class="col-9 mb-2">
                                     <div class="input-group">
                                         <label class="col-4" for="postcode">PostCode </label>
-                                        <input class="input form-control" name="postcode" value="" />
+                                        <input required class="input form-control" name="postcode" value="" />
                                     </div>
                                 </div>
                                 <div class="col-9 mb-2">
                                     <div class="input-group">
                                         <label class="col-4" for="country">Country </label>
-                                        <input class="input form-control" name="country" value="" />
+                                        <input required class="input form-control" name="country" value="" />
                                     </div>
                                 </div>
                                 <div class="col-9 mb-2">

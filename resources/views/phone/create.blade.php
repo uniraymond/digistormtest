@@ -13,14 +13,14 @@
                                 <div class="col-9 mb-2">
                                     <div class="input-group">
                                         <label class="col-4" for="phone_type">Phone Type</label>
-                                        <input class="input form-control" name="phone_type" value="" />
+                                        <input required class="input form-control" name="phone_type" value="" />
 
                                     </div>
                                 </div>
                                 <div class="col-9 mb-2">
                                     <div class="input-group">
                                         <label class="col-4" for="phone_number">Phone Number </label>
-                                        <input class="input form-control" name="phone_number" value="" />
+                                        <input required class="input form-control" name="phone_number" value="" />
 
                                     </div>
                                 </div>
