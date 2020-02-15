@@ -14,6 +14,11 @@ class Profile extends Model
         return $this->belongsTo('\App\User');
     }
 
+    /**
+     * load profile path with id
+     *
+     * @return string
+     */
     public function path()
     {
         return '/profile/' . $this->id;

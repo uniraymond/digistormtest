@@ -29,3 +29,8 @@ Route::post('/phone', 'PhonesController@store');
 Route::patch('/phone/{phone}', 'PhonesController@update');
 Route::delete('/phone/{phone}', 'PhonesController@destroy');
 
+Route::get('/address', 'AddressesController@index');
+Route::post('/address', 'AddressesController@store');
+Route::patch('/address/{address}', 'AddressesController@update');
+Route::delete('/address/{address}', 'AddressesController@destroy');
+
